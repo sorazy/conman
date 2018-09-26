@@ -1,0 +1,88 @@
+<!-- Personal Contact Manager -->
+<!-- COP 4331 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Manager</title>
+	<!-- Make sure these two files are in the same folder as the html file -->
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+
+	<!-- Login the user -->
+	<div id="loginForm">
+			<h1>Contact Manager</h1>
+			<h2>Log In</h2>
+			<!-- Feel free to change the id's of these inputs -->
+			Username: <input type="text" id="loginUser" required=""><br>
+			Password: <input type="password" id="pwUser" required=""><br>
+			<!-- Call javascript function, make sure index.js is in the same folder -->
+			<button type="submit" onclick="doLogin();">Login</button>
+			<br><br>
+			<button id="signUp" type="submit" onclick="doSignUp();">Sign Up</button>
+	</div>
+
+	<!-- Displays once the user has logged in, else it stays hidden -->
+	<div id="loggedInDiv" style="display:none; visibility:hidden;">
+		<!-- Displays the user's username once they have logged in -->
+		Logged in as <span id="userLog"></span><br>
+		<button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
+	</div>
+	<!-- Give some error message is something went wrong-->
+	<span id="logginResult"></span>
+
+	<!-- Create a new user account-->
+	<div id="createAccount" style="display:none; visibility:hidden;">
+		<h2>Create Your Account</h2>
+		<!-- Again, feel free to change the id names just make sure the changes are also made in the javascript file-->
+			<input type="text" id="firstName" placeholder="First Name" required=""><br>
+			<input type="text" id="lastName" placeholder="Last Name" required=""><br>
+			<input type="text" id="email" placeholder="Email" required=""><br>
+			<input type="text" id="newUser" placeholder="Username" required=""><br>
+			<input type="password" id="passwordNewUser" placeholder="Password" required=""><br>
+			<button id="signUpButton" type="submit" onclick="registerNewUser();">Sign Up!</button>
+			<span id="userAddResult"></span>
+			<br><br>
+			<button id="backToLogin" type="submit" onclick="backToLogin();">Back To Login</button>
+	</div>
+
+	<!-- Search for a contact, stays hidden until the user logs in-->
+	<div id="contactList" style="display: none; visibility: hidden;">
+		<br>
+		<input type="text" name="search" id="searchContact">
+		<!-- Havent started the code for searchContact and deleteContact functions yet so they don't do anything-->
+		<button type="submit" onclick="searchContact();">Search Contact</button>
+		<button type="submit" onclick="showAll();">Show All Contacts</button>
+		<br>
+		<input type="text" name="search" id="deleteContact" style="display:none; visibility:hidden;">
+		<button type="submit" onclick="deleteContact();" style="display:none; visibility:hidden;">Delete Contact</button>
+		<div id="contactSearchResult">
+			<table>
+				<thead>
+				<tr>
+					<th>First Name</th><th>Last Name</th><th>Number</th><th>Email</th><th>Address</th><th></th><th style="display:none; visibility:show;">contactID</th>
+				</tr>
+			</thead>
+			<tbody id="searchResults">
+			</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- Hidden until user logs in-->
+	<div id="addContactList" style="display: none; visibility: hidden;">
+			<h2>Add Contact</h2>
+			<label>First Name:</label> <input type="text" id="addFirstName"><br>
+			<label>Last Name:</label> <input type="text" id="addLastName"><br>
+			<label>Phone Number:</label> <input type="text" id="addPhoneNumber"><br>
+			<label>Email:</label> <input type="text" id="addEmail"><br>
+			<label>Home Address:</label> <input type="text" id="addAddress"><br>
+			<button type="submit" onclick="addContact();">Add Contact</button><br>
+			<span id="contactAddResult"></span>
+	</div>
+
+</body>
+</html>
+<!--  -->

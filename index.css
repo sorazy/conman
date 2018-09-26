@@ -1,0 +1,79 @@
+body {
+    font-family: "Courier New", Courier, sans-serif;
+    height: 100%;
+    color: #525a5e;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.7vw;
+
+    background-image: url('https://i0.wp.com/ficedu.org/wp-content/uploads/2016/07/Savin-NY-Website-Background-Web.jpg');
+    height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contactList {
+  width: 60%;
+  float: right;
+  padding-right: 3em;
+}
+
+#addContactList {
+  float: left;
+  padding-left: 3em;
+}
+
+@media screen and (max-width: 600px) {
+
+  #contactList {
+    width: auto;
+    float: none;
+  }
+
+  #addContactList {
+    float: none;
+    align-items: center;
+    width: auto 35%;
+    margin-left: 16em;
+    margin-right: 16em;
+  }
+}
+
+table {
+  font-size: 1.0vw;
+}
+
+label {
+  display: inline-block;
+  font-size: 1.2vw;
+  text-align: justify;
+  width: 35%;
+}
+
+input, button {
+  margin: 0 auto;
+  display: inline-block;
+  font-family: "Courier New", Courier, sans-serif;
+  font-size: 1.2vw;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 3em;
+}
+
+input, select, textarea{
+    color: #000000;
+}
+
+textarea:focus, input:focus {
+    color: #000000;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+}
